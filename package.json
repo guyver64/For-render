@@ -6,10 +6,10 @@
   "author": "Gongrzhe, Inc.",
   "homepage": "https://gongrzhe.com",
   "type": "module",
-  "main": "dist/index.js",
+  "main": "dist/server.js",
   "scripts": {
     "build": "tsc",
-    "start": "concurrently \"node dist/index.js\" \"node dist/server.js\"",
+    "start": "node dist/server.js",
     "prepare": "npm run build"
   },
   "dependencies": {
@@ -18,8 +18,7 @@
     "node-fetch": "^3.3.2",
     "zod": "^3.22.4",
     "zod-to-json-schema": "^3.22.4",
-    "express": "^4.18.4",
-    "concurrently": "^8.2.2"
+    "express": "^4.18.4"
   },
   "devDependencies": {
     "@types/node": "^22",
@@ -28,7 +27,7 @@
   },
   "files": ["dist"],
   "bin": {
-    "server-travelplanner-mcp": "./dist/index.js"
+    "server-travelplanner-mcp": "./dist/server.js"
   },
   "publishConfig": {
     "access": "public"
