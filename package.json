@@ -1,0 +1,36 @@
+{
+  "name": "@gongrzhe/server-travelplanner-mcp",
+  "version": "0.1.2",
+  "description": "MCP server for travel planning and itinerary management",
+  "license": "MIT",
+  "author": "Gongrzhe, Inc.",
+  "homepage": "https://gongrzhe.com",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "concurrently \"node dist/index.js\" \"node dist/server.js\"",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "0.5.0",
+    "@googlemaps/google-maps-services-js": "^3.3.41",
+    "node-fetch": "^3.3.2",
+    "zod": "^3.22.4",
+    "zod-to-json-schema": "^3.22.4",
+    "express": "^4.18.4",
+    "concurrently": "^8.2.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/google.maps": "^3.54.10",
+    "typescript": "^5.3.3"
+  },
+  "files": ["dist"],
+  "bin": {
+    "server-travelplanner-mcp": "./dist/index.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
