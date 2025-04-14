@@ -23,6 +23,7 @@
   "devDependencies": {
     "@types/node": "^22",
     "@types/google.maps": "^3.54.10",
+    "@types/express": "^4.17.21",
     "typescript": "^5.3.3"
   },
   "files": ["dist"],
